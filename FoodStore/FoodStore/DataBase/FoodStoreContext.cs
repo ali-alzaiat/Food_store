@@ -11,5 +11,9 @@ namespace FoodStore.DataBase
         {
             optionsBuilder.UseSqlite(@"Data Source=Store.db");
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Seed();
+        }
     }
 }
